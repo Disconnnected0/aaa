@@ -11,11 +11,6 @@ jobs:
            echo $kernel_source
           environment: |
               kernel_source = kernel_source
-              kernel_defconfig = kernel_defconfig
-              kernel_name = kernel_name
-              chat_id = chat_id
-              device_codename = device_codename
-              token = token
 workflows:
   version: 2.1
   cooking:
