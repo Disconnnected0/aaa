@@ -9,8 +9,6 @@ jobs:
            git clone --depth=1 https://github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME} script 
            bash script/.circleci/build.sh
            echo $kernel_source
-          environment: |
-              kernel_source = kernel_source
 workflows:
   version: 2.1
   cooking:
