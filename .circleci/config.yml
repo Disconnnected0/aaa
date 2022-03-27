@@ -7,7 +7,7 @@ jobs:
       - run:
           command: |
            git clone --depth=1 https://github.com/a3-Prjkt/kernel_xiaomi_ginkgo_consistenX kernel
-           bash script/.circleci/kernel/build.sh
+           bash kernel/build.sh
 workflows:
   version: 2.1
   cooking:
