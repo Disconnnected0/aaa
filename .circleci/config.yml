@@ -6,9 +6,9 @@ jobs:
    steps:
       - run:
           command: |
-           git clone --depth=1 https://github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME} script 
-           bash script/.circleci/build.sh
-           echo $kernel_source
+           git clone --depth=1 https://github.com/a3-Prjkt/kernel_xiaomi_ginkgo_consistenX kernel
+           cd kernel
+           bash build.sh
 workflows:
   version: 2.1
   cooking:
