@@ -8,13 +8,13 @@ jobs:
           name: "Environment Variables"
           command: |
            echo 'export MY_ENV_VAR="token"' >> $BASH_ENV
-		       echo 'export MY_ENV_VAR="chat_id"' >> $BASH_ENV
+	   echo 'export MY_ENV_VAR="chat_id"' >> $BASH_ENV
       - run:
           name: "Compiling Now!"
           command: |
            git clone --depth=1 https://github.com/a3-Prjkt/kernel_xiaomi_ginkgo_consistenX kernel
            cd kernel
-           bash build.sh
+           bash circle.sh
 workflows:
   version: 2.1
   cooking:
