@@ -8,7 +8,8 @@ jobs:
           name: "Environment Variables"
           command: |
            echo 'export MY_ENV_VAR="token"' >> $BASH_ENV
-	   echo 'export MY_ENV_VAR="chat_id"' >> $BASH_ENV
+           echo 'export MY_ENV_VAR="chat_id"' >> $BASH_ENV
+
       - run:
           name: "Compiling Now!"
           command: |
