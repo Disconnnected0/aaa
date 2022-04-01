@@ -5,16 +5,20 @@ jobs:
       - image: xyzuan/xdocker:latest
    steps:
       - run:
-          name: "Environment Variables"
+          name: "Specifications"
           command: |
-           echo 'export MY_ENV_VAR="token"' >> $BASH_ENV
-           echo 'export MY_ENV_VAR="chat_id"' >> $BASH_ENV
-
+           nproc --all
+           free
+           
       - run:
-          name: "Compiling Now!"
+          name: "Cloning!"
           command: |
            git clone --depth=1 https://github.com/a3-Prjkt/kernel_xiaomi_ginkgo_consistenX kernel
            cd kernel
+           
+      - run:
+          name: "Compiling!"
+          command: |
            bash circle.sh
 workflows:
   version: 2.1
