@@ -4,7 +4,7 @@ jobs:
    docker:
       - image: xyzuan/xdocker:latest
   
-  steps:
+   steps:
       - run:
           name: "Time Check"
           command: |
@@ -13,7 +13,7 @@ jobs:
            echo ============
            echo The Main Thing Begins :)
            echo ============
-       - run:
+      - run:
            name: "Precaution"
            command: |
             echo This a CIsX TEST build
