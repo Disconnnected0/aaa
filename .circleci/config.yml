@@ -6,7 +6,7 @@ jobs:
   
    steps:
       - run:
-          name: "Time Check"
+          name: "Time Check {Read This}"
           command: |
            echo ============
            echo Manila Time $(TZ=Asia/Manila date +"Date %d-%m-%y Time %H:%M")
