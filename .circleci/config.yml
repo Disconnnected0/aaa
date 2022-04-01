@@ -13,8 +13,12 @@ jobs:
            echo ========
            echo RAM/Swap Free
            echo ==============
-           free
+           free -h
            echo ==============
+           echo Storage
+           echo ===================
+           df -h -x squashfs --total
+           echo ===================
            
       - run:
           name: "Cloning!"
