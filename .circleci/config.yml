@@ -9,9 +9,7 @@ jobs:
           name: "Time Check"
           command: |
            echo ============
-           echo Manila Time $(TZ=Asia/Manila date +"%Y%m%d-%H%M")
-           echo ============
-           echo The Main Thing Begin
+           echo Manila Time $(TZ=Asia/Manila date +"Date= Year%Y-Month%m-Day%d Time= %H:%M")
            echo ============
       - run:
            name: "Precaution"
