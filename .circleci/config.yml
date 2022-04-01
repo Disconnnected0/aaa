@@ -11,7 +11,7 @@ jobs:
            echo ============
            echo Manila Time $(TZ=Asia/Manila date +"%Y%m%d-%H%M")
            echo ============
-           echo The Main Thing Begins :)
+           echo The Main Thing Begin
            echo ============
       - run:
            name: "Precaution"
