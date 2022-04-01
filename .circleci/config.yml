@@ -17,7 +17,7 @@ jobs:
            name: "Precaution"
            command: |
             echo This a CIsX TEST build
-            echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            echo --------------------------------------------------------
             echo This could be Working or not
             echo but still don't be confident it
             echo cause it could be unstable sometimes
