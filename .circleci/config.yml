@@ -7,8 +7,14 @@ jobs:
       - run:
           name: "Specifications"
           command: |
+           echo Core Count
+           echo ========
            nproc --all
+           echo ========
+           echo RAM/Swap Free
+           echo ==============
            free
+           echo ==============
            
       - run:
           name: "Cloning!"
