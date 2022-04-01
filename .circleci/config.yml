@@ -3,21 +3,40 @@ jobs:
   compile:
    docker:
       - image: xyzuan/xdocker:latest
-      
-   parallelism: 4
-   
-   steps:
+  
+  steps:
+      - run:
+          name: "Time Check"
+          command: |
+           echo ============
+           echo Manila Time $(TZ=Asia/Manila date +"%Y%m%d-%H%M")
+           echo ============
+           echo The Main Thing Begins :)
+           echo ============
+       - run:
+           name: "Precaution"
+           command: |
+            echo This a CIsX TEST build
+            echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            echo This could be Working or not
+            echo but still don't be confident it
+            echo cause it could be unstable sometimes
+            echo ========================================================
+            echo Thanks for your understanding
+            echo Report Bugs on the telegram Group @A3_Project_Discussion
       - run:
           name: "Specifications"
           command: |
            echo Core Count
-           echo ========
+           echo ===================
            nproc --all
-           echo ========
+           echo ===================
+           echo 
            echo RAM/Swap Free
-           echo ==============
+           echo ===================
            free -h
-           echo ==============
+           echo ===================
+           echo
            echo Storage
            echo ===================
            df -h -x squashfs --total
@@ -27,6 +46,7 @@ jobs:
           name: "Cloning!"
           command: |
            git clone --depth=1 https://github.com/a3-Prjkt/kernel_xiaomi_ginkgo_consistenX -b eleven-test kernel
+           git status
            
       - run:
           name: "Compiling!"
