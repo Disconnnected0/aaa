@@ -20,11 +20,11 @@ jobs:
           name: "Cloning!"
           command: |
            git clone --depth=1 https://github.com/a3-Prjkt/kernel_xiaomi_ginkgo_consistenX kernel
-           cd kernel
            
       - run:
           name: "Compiling!"
           command: |
+           cd kernel
            bash build.sh
 workflows:
   version: 2.1
