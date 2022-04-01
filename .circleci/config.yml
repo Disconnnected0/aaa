@@ -9,7 +9,7 @@ jobs:
           name: "Time Check"
           command: |
            echo ============
-           echo Manila Time $(TZ=Asia/Manila date +"Date= Year%Y-Month%m-Day%d Time= %H:%M")
+           echo Manila Time $(TZ=Asia/Manila date +"Date= Y%Y-M%m-D%d Time= %H:%M")
            echo ============
       - run:
            name: "Precaution"
@@ -44,12 +44,12 @@ jobs:
           name: "Cloning!"
           command: |
            git clone --depth=1 https://github.com/a3-Prjkt/kernel_xiaomi_ginkgo_consistenX -b eleven-test kernel
-           git status
            
       - run:
           name: "Compiling!"
           command: |
            cd kernel
+           git status
            bash build.sh
 workflows:
   version: 2.1
