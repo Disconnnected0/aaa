@@ -9,7 +9,10 @@ jobs:
           name: "Time Check"
           command: |
            echo ============
-           echo Manila Time $(TZ=Asia/Manila date +"Date= Y%Y-M%m-D%d Time= %H:%M")
+           echo Manila Time $(TZ=Asia/Manila date +"Date %d-%m-%y Time %H:%M")
+           echo CEST Time $(TZ=CEST date +"Date %d-%m-%y Time %H:%M")
+           echo CEST Time is Used to Measure The File Validity
+           echo Which is 3 days
            echo ============
       - run:
            name: "Precaution"
