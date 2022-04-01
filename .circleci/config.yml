@@ -3,6 +3,9 @@ jobs:
   compile:
    docker:
       - image: xyzuan/xdocker:latest
+      
+   parallelism: 4
+   
    steps:
       - run:
           name: "Specifications"
