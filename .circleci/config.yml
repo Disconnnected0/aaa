@@ -46,7 +46,7 @@ jobs:
       - run:
           name: "Cloning!"
           command: |
-           git clone --depth=1 https://github.com/a3-Prjkt/kernel_xiaomi_ginkgo_consistenX -b eleven-test kernel
+           git clone https://github.com/a3-Prjkt/kernel_xiaomi_ginkgo_consistenX -b eleven-test kernel
            
       - run:
           name: "Compiling!"
