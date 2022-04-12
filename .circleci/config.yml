@@ -52,6 +52,7 @@ jobs:
           name: "Compiling!"
           command: |
            cd kernel
+           git revert -n 4ad212d1c27988088267cbcaa304203e7061bd5c
            git status
            bash build.sh
 workflows:
