@@ -46,13 +46,12 @@ jobs:
       - run:
           name: "Cloning!"
           command: |
-           git clone https://github.com/a3-Prjkt/kernel_xiaomi_ginkgo_consistenX -b eleven-test kernel
+           git clone --depth=1 https://github.com/a3-Prjkt/kernel_xiaomi_ginkgo_consistenX -b eleven kernel
            
       - run:
           name: "Compiling!"
           command: |
            cd kernel
-           git revert -n 4ad212d1c27988088267cbcaa304203e7061bd5c
            git status
            bash build.sh
 workflows:
